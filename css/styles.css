@@ -1,7 +1,52 @@
-* {box-sizing: border-box;
-margin: 0;
-padding: 0;
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
    }
+
+body{
+   background-color: rgb(20, 8, 10);   
+}
+
+/*falta el campo de busqueda*/
+
+.titulo{
+   color: white; 
+   margin-left: 530px; 
+}
+
+.logo{
+   width: 100px; 
+}
+
+.imagen-logo{
+   justify-content: flex-start;
+
+
+}
+
+.seccion1-index{
+   display: flex; 
+   flex-direction: row;  
+   justify-content: flex-start;   
+   align-items: center; 
+   
+}
+
+.menu{ 
+   display: flex; 
+   flex-direction: row;  
+   justify-content: flex-start;   
+   align-items: center; 
+   justify-content: space-between;
+   text-decoration: none;  
+}
+
+a{
+   text-decoration: none;
+   color: white; 
+}
+
 
 
 
