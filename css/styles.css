@@ -5,7 +5,8 @@
    }
 
 body{
-   background-color: rgb(20, 8, 10);   
+   background-color: rgb(21, 7, 8);   
+   padding: 60px;    
 }
 
 /*falta el campo de busqueda*/
@@ -15,42 +16,92 @@ body{
 }
 
 .logo{
-   width: 100px; 
+   width: 150px;  
+   border-radius: 100%;      
+}   
+
+nav.container{
+   display: flex;
+   justify-content: flex-end;
+   flex-wrap: wrap; 
 }
 
-.imagen-logo{
-   display: flex; 
-   justify-content: flex-start;
-}  
+ul.navegador{
+   width: 500px;  
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;    
+}
 
-header{
-   display: flex; 
-   flex-direction: row;  
-   justify-content: flex-start;   
-   align-items: center; 
-   justify-content: space-around; 
-} 
-
-.menu{ 
-   display: flex; 
-   flex-wrap: wrap;
-   flex-direction: row;  
-   justify-content: space-between; 
-   align-items: center; 
-   text-decoration: none;   
-   padding-left: 50px;  
-   padding-right: 50px; 
-
-} 
-
-a{
+li, a{
    text-decoration: none;
    color: white; 
+   list-style-type: none; 
+}
+
+div.containerlogo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; 
+    flex-wrap: wrap; 
+} 
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; 
+    flex-wrap: wrap; 
+}  
+
+.portada{
+   width: 100%; 
 }
 
 .barra{
    color: white; 
+   margin-bottom: 50px;  
 }
+
+.nombres{
+   color: aliceblue;
+   display: flex;
+   justify-content: flex-end;
+   flex-wrap: wrap; 
+}
+
+h1{
+   color: aliceblue; 
+   margin-top: 40px;   
+}
+
+h3{
+   color: aliceblue;
+}
+
+h2{
+   color: aliceblue;  
+}
+
+p{
+   color: aliceblue;
+}
+
+.producto{
+   width: 400px;    
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+    margin-top: 30px; 
+}
+
+article{
+    max-width: 30%; 
+    margin-bottom: 30px;  
+}
+
 
 
 
