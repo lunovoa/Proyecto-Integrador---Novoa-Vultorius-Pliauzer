@@ -5,7 +5,7 @@
    }
 
 body{
-   background-color: rgb(21, 7, 8);   
+   background-color: rgb(21, 7, 8);  
    padding: 60px;    
 }
 
@@ -26,12 +26,12 @@ nav.container{
    flex-wrap: wrap; 
 }
 
-ul.navegador{
+ul.navegador{ 
    width: 500px;  
    display: flex;
    justify-content: space-around;
    flex-wrap: wrap;    
-}
+} 
 
 li, a{
    text-decoration: none;
@@ -41,21 +41,19 @@ li, a{
 
 div.containerlogo{
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px; 
+    justify-content: center; 
+    margin-bottom: 20px;  
     flex-wrap: wrap; 
 } 
+
 
 .titulo{
     display: flex;
     justify-content: center;
-    margin-bottom: 20px; 
+    margin-bottom: 10px;  
+    margin-top: 10px; 
     flex-wrap: wrap; 
 }  
-
-.portada{
-   width: 100%; 
-}
 
 .barra{
    color: white; 
@@ -76,10 +74,12 @@ h1{
 
 h3{
    color: aliceblue;
+   padding-bottom: 10px; 
+
 }
 
 h2{
-   color: aliceblue;  
+   color: aliceblue;
 }
 
 p{
@@ -99,9 +99,31 @@ section{
 
 article{
     max-width: 30%; 
-    margin-bottom: 30px;  
+    margin-bottom: 40px;  
 }
 
+.boton{
+   background-color: rgb(170, 10, 10);
+   color: aliceblue;
+   padding: 5px; 
 
+}
 
+.principal{
+   display: flex;
+   justify-content: space-between;
+}
 
+.barra-lateral{
+   display: flex;
+}
+
+.img-principal{
+   display: flex;
+   justify-content: flex-end; 
+   flex-wrap: wrap; 
+} 
+
+.portada{
+   width: 90%;    
+}
