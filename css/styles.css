@@ -46,6 +46,12 @@ div.containerlogo{
     flex-wrap: wrap; 
 } 
 
+.buscador.input{
+   padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: none;
+}
 
 .titulo{
     display: flex;
@@ -87,7 +93,8 @@ p{
 }
 
 .producto{
-   width: 400px;    
+   width: 400px;
+   border-radius: 5%;    
 }
 
 section{
@@ -122,6 +129,7 @@ article{
    display: flex;
    justify-content: flex-end; 
    flex-wrap: wrap; 
+   height: 600px;
 } 
 
 .portada{
