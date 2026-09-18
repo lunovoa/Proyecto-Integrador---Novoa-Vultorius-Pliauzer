@@ -168,3 +168,85 @@ article{
    margin-top: 20px; 
 }
 
+.registro{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   min-height: 70vh;
+}
+
+.formulario-registro{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: white;
+   background-color: rgba(255,255,255,0.05);
+   padding: 30px 40px;
+   border-radius: 10px;
+   margin-top: 10px;
+}
+
+.formulario-registro h2{
+   color: white;
+   margin-bottom: 20px;
+}
+
+.mail-registro,
+.password-registro,
+.password2-registro{
+   width: 100%;
+   margin-bottom: 15px;
+   display: flex;
+   flex-direction: column;
+}
+
+.mail-registro label,
+.password-registro label,
+.password2-registro label{
+   margin-bottom: 5px;
+   color: white;
+}
+
+.mail-registro input,
+.password-registro input,
+.password2-registro input{
+   padding: 8px;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+}
+
+.terminos-registro{
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   margin-bottom: 20px;
+   color: white;
+}
+
+.registrarme-registro button{
+   background-color: rgb(170, 10, 10);
+   color: aliceblue;
+   border: none;
+   padding: 10px 30px;
+   border-radius: 4px;
+   font-size: 16px;
+   cursor: pointer;
+   margin-bottom: 15px;
+}
+
+.registrarme-registro button:hover{
+   background-color: red;
+}
+
+.ya-tengo-cuenta-registro a{
+   color: rgb(255, 120, 120);
+   text-decoration: underline;
+}
+
+footer{
+   margin-top: 40px;
+   text-align: center;
+   color: white;
+}
