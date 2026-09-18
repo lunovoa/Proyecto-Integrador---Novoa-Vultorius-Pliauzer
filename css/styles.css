@@ -13,7 +13,6 @@ body{
    width: 150px;  
    border-radius: 100%;      
 }   
-
 nav.container{
    display: flex;
    justify-content: flex-end;
@@ -37,10 +36,10 @@ li, a{
 
 
 .buscador.input{
-  padding: 6px;
-  border: 1px solid #ccc; 
-  border-radius: 4px;
-  background: none;
+   padding: 6px;
+   border: 1px solid #ccc; 
+   border-radius: 4px;
+   background: none;
 }
 
 .titulo{
@@ -72,7 +71,7 @@ h1{
 h3{
    color: aliceblue;
    padding-bottom: 10px; 
-
+   
 }
 
 h2{
@@ -88,6 +87,11 @@ p{
    border-radius: 5%;    
 }
 
+header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
 section{
     display: flex;
     flex-wrap: wrap;
@@ -230,7 +234,6 @@ article{
 .terminos-registro{
    display: flex;
    align-items: center;
-   gap: 8px;
    margin-bottom: 20px;
    color: white;
 }
@@ -242,7 +245,6 @@ article{
    padding: 10px 30px;
    border-radius: 4px;
    font-size: 16px;
-   cursor: pointer;
    margin-bottom: 15px;
 }
 
@@ -256,3 +258,5 @@ footer{
    text-align: center;
    color: white;
 }
+
+flex-direction=columnb 
