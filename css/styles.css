@@ -38,7 +38,7 @@ li, a{
 
 .buscador.input{
   padding: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; 
   border-radius: 4px;
   background: none;
 }
