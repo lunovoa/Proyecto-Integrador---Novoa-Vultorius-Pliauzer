@@ -129,21 +129,27 @@ article{
    width: 90%;    
 }
 
+.main_login{
+   display: flex;
+   justify-content: center; 
+}
+
 .login{
    display: flex;
    flex-direction: row;     
    flex-wrap: wrap;
-   justify-content: center;   
-   align-items: center; 
+   justify-content: center; 
+   background-color: rgba(255,255,255,0.05); 
+   border: 2px white solid;
+   width: 350px;   
+   padding: 30px;  
 }
 
 .formulario-login{
    display: flex;
-   justify-content: center;
    color: white; 
    flex-direction: column; 
    align-items: center; 
-   align-self: center; 
    margin-top: 10px; 
 }
 
@@ -166,6 +172,10 @@ article{
    border-color: 2px white solid; 
    padding: 10px;
    margin-top: 20px; 
+}
+
+.titulo-login{
+   margin-bottom: 20px; 
 }
 
 .registro{
