@@ -246,10 +246,6 @@ article{
    margin-bottom: 15px;
 }
 
-.registrarme-registro button:hover{
-   background-color: red;
-}
-
 .ya-tengo-cuenta-registro a{
    color: rgb(255, 120, 120);
    text-decoration: underline;
