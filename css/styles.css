@@ -83,12 +83,13 @@ p{
 }
 
 .producto{
-   width: 400px;
+   width: 250px;
    border-radius: 5%;    
 }
 
 header{
    display: flex;
+   flex-direction: row;
    align-items: center;
    justify-content: space-between;
 }
@@ -97,11 +98,15 @@ section{
     flex-wrap: wrap;
     justify-content: space-between;  
     margin-top: 30px; 
+    background-color: #450A05;
+    border-radius: 2%;
+
 }
 
 article{
-    max-width: 30%; 
-    margin-bottom: 40px;  
+   max-width: 20%; 
+   margin: 15px;
+    
 }
 
 .boton{
@@ -124,9 +129,8 @@ article{
 .img-principal{
    display: flex;
    justify-content: flex-end; 
-   flex-wrap: wrap; 
+   flex-wrap: wrap;
    margin-bottom: 40px;  
-   width: 100%; 
 } 
 
 .portada{
