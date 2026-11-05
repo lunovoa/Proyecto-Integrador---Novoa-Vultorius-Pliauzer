@@ -8,7 +8,7 @@ fetch('https://dummyjson.com/products/category-list')
     console.log(data)   
 
     let resultado = data 
-    for (let i = 0; i < resultado.length; i++) {
+    for (let i = 0; i < resultado.length; i++) { 
         categorias.innerHTML += `
         <li>${resultado[i]} </li>` 
     } 
@@ -17,4 +17,5 @@ fetch('https://dummyjson.com/products/category-list')
 .catch(function(e){
     console.log("el error es:" +e);
 });
+
 
