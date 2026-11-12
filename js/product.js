@@ -30,7 +30,7 @@ fetch('https://dummyjson.com/products/1')
     let producto = data.result
     for (let i=0; i < producto.length; i++){ 
         product.innerHTML += `<article>
-        <img src = >
+        <img src = "./img/top-runik.png"> 
         <h1> Producto: ${producto[i].title}</h1>
         <h3> Marca: ${producto[i].brand} </h3>       
         <p>Descripcion: ${producto[i].description} </p>
@@ -59,7 +59,7 @@ fetch('https://dummyjson.com/products/1')
 
     let resena1 = data.result
     for (let i=0; i < resena1.length; i++){ 
-        product.innerHTML += `<li>
+        resena.innerHTML += `<li>
         <h3>Nombre: ${resena1[i].reviewerName}</h3>
         <h3>Rating: ${resena1[i].rating}</h3>
         <h3>Comentario: ${resena1[i].comment}</h3>
