@@ -20,19 +20,19 @@ fetch('https://dummyjson.com/products/category-list')
 
 let product = document.querySelector(".article-product")
 
-fetch('https://dummyjson.com/products/1')
+fetch('https://dummyjson.com/products')  
 .then(function(response){
     return response.json()
 })
 .then(function(data){
-    console.log(data.result)
+    console.log(data.products)
 
-    let producto = data.result
+    let producto = data.products
     for (let i=0; i < producto.length; i++){ 
         product.innerHTML += `<article>
-        <img src = "./img/top-runik.png"> 
+        <img src = "${producto[i].images}">  
         <h1> Producto: ${producto[i].title}</h1>
-        <h3> Marca: ${producto[i].brand} </h3>       
+        <h3> Marca: ${producto[i].brand} </h3>        
         <p>Descripcion: ${producto[i].description} </p>
         <h3> Precio: ${producto[i].price} </h3>
         <p>${producto[i]}.tags</p> 
@@ -44,8 +44,6 @@ fetch('https://dummyjson.com/products/1')
 .catch(function(e){
     console.log("el error es:" +e);
 });
-
-
 
 
 let resena = document.querySelector(".reviews"); 
