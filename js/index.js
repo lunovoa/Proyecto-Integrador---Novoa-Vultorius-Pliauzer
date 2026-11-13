@@ -21,22 +21,22 @@ fetch('https://dummyjson.com/products/category-list')
 
 
 
-let product = document.querySelector(".article-product")
+let product = document.querySelector(".productos-seccion1") 
 
-fetch('https://dummyjson.com/products/1')
+fetch('https://dummyjson.com/products') 
 .then(function(response){
     return response.json()
 })
 .then(function(data){
-    console.log(data.result)
+    console.log(data.products)
 
-    let productos = data.result
+    let productos = data.products //.products es para entrar al objeto literal donde están los arrays 
     for (let i=0; i < productos.length; i++){ 
         product.innerHTML += `<article>
-          <img src = "">
-          <h2>Titulo: ${productos[i].title}</h2> 
+          <img src = "${productos[i].images}"> 
+          <h2>Titulo: ${productos[i].title}</h2>  
           <p>Descripción: ${productos[i].description}</p>
-          <h3>Precio: ${productos[i].price}</h3> 
+          <h3>Precio: ${productos[i].price}</h3>  
         </article>` 
     } 
 }) 

@@ -50,14 +50,14 @@ fetch('https://dummyjson.com/products/1')
 
 let resena = document.querySelector(".reviews"); 
 
-fetch('https://dummyjson.com/products/1')
+fetch('https://dummyjson.com/products')
 .then(function(response){
     return response.json()
 })
 .then(function(data){
-    console.log(data.result) 
+    console.log(data.products)  
 
-    let resena1 = data.result
+    let resena1 = data.products
     for (let i=0; i < resena1.length; i++){ 
         resena.innerHTML += `<li>
         <h3>Nombre: ${resena1[i].reviewerName}</h3>
