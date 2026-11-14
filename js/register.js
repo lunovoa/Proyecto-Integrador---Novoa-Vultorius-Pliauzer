@@ -36,3 +36,17 @@ form.addEventListener("submit", function(event) {
     }
 
 })
+
+form.addEventListener("submit", function(event2) {
+    console.log("dentro del eventListener");
+    event2.preventDefault(); 
+
+    if (pass.value.length < 6) {
+        alert("La contraseña debe tener al menos 6 caracteres");
+    }else if (pass2.value.length < 6) {
+        alert("La contraseña debe tener al menos 6 caracteres");
+    }else if (pass.value == pass2.value) { 
+        alert("Las contraseñas no coinciden");
+    }
+
+})
