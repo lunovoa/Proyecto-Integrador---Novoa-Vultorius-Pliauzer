@@ -13,7 +13,7 @@ buscador.addEventListener("submit", function(event){
     } else if (busqueda.length < 3){
         respuesta.innerHTML = "Tiene que tener al menos 3 caracteres";
     };
-
+    location.href = "resultados.html?category=" + busqueda
 })
 
 

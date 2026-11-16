@@ -1,6 +1,6 @@
 let buscador = document.querySelector(".buscador")
 let input = document.querySelector(".input")
-
+let respuesta = document.querySelector(".error");
 
 buscador.addEventListener("submit", function(event){
     event.preventDefault()
