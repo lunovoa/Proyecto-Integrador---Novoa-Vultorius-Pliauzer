@@ -1,3 +1,22 @@
+let buscador = document.querySelector(".buscador")
+let input = document.querySelector(".input")
+
+
+buscador.addEventListener("submit", function(event){
+    event.preventDefault()
+    let busqueda = input.value
+
+    if (busqueda == ""){
+        busqueda.innerHTML = "Completar la busqueda"
+
+    } else if (busqueda.length < 3){
+        busqueda.innerHTML = "Tiene que tener al menos 3 caracteres"
+    }
+
+   
+})
+
+
 let categorias = document.querySelector(".barra");
 categorias.style.listStyle = "none";
 
@@ -40,7 +59,7 @@ form.addEventListener("submit", function(event) {
 buscar.addEventListener("blur", function(){ 
     console.log("en blur");
     if(buscar.value == ""){ 
-        alert("Deebe buscar algo")
+        alert("Debe buscar algo")
     }
 })
 
