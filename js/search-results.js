@@ -1,4 +1,5 @@
 let categorias = document.querySelector(".barra");
+categorias.style.listStyle = "none";
 
 fetch('https://dummyjson.com/products/category-list') 
 .then(function(response){
@@ -10,10 +11,37 @@ fetch('https://dummyjson.com/products/category-list')
     let resultado = data 
     for (let i = 0; i < resultado.length; i++) { 
         categorias.innerHTML += `
-        <li>${resultado[i]} </li>` 
-    } 
+        <li class="categoria"><a href="./category.html">${resultado[i]}</a></li>  
+        `  
+    }  
 })
 
 .catch(function(e){
     console.log("el error es:" +e);
-}); 
+});
+
+
+
+
+let buscar = document.querySelector(".formulario-busqueda");  
+
+form.addEventListener("submit", function(event) {
+    console.log("dentro del eventListener");
+    event.preventDefault();
+
+    if(buscar.value.lenght < 2){
+        alert("Debe completar la busqueda con mínimo 3 caracteres");  
+
+    } else{
+        this.submit()
+    }
+}) 
+
+buscar.addEventListener("blur", function(){ 
+    console.log("en blur");
+    if(buscar.value == ""){ 
+        alert("Deebe buscar algo")
+    }
+})
+
+

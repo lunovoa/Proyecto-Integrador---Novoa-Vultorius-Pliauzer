@@ -1,4 +1,5 @@
 let categorias = document.querySelector(".barra");
+categorias.style.listStyle = "none";
 
 fetch('https://dummyjson.com/products/category-list') 
 .then(function(response){
@@ -9,9 +10,10 @@ fetch('https://dummyjson.com/products/category-list')
 
     let resultado = data 
     for (let i = 0; i < resultado.length; i++) { 
-        categorias.innerHTML += `
-        <li>${resultado[i]} </li>` 
-    } 
+        categorias.innerHTML += `<li>
+        <a href = "./product.html">${resultado[i]}</a>
+        </li>`  
+    }  
 })
 
 .catch(function(e){

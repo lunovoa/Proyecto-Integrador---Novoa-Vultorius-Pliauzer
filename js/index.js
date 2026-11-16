@@ -1,4 +1,5 @@
 let categorias = document.querySelector(".barra");
+categorias.style.listStyle = "none"; 
 
 fetch('https://dummyjson.com/products/category-list') 
 .then(function(response){
@@ -9,9 +10,10 @@ fetch('https://dummyjson.com/products/category-list')
 
     let resultado = data 
     for (let i = 0; i < resultado.length; i++) { 
-        categorias.innerHTML += `
-        <li>${resultado[i]} </li>` 
-    } 
+        categorias.innerHTML += `<li>
+        <a href = "./product.html">${resultado[i]}</a>
+        </li>`  
+    }  
 })
 
 .catch(function(e){
@@ -20,52 +22,56 @@ fetch('https://dummyjson.com/products/category-list')
 
 
 
-let product = document.querySelector(".productos-seccion1") 
+let product = document.querySelector(".productos-seccion1")
 
-fetch('https://dummyjson.com/products') 
-.then(function(response){
-    return response.json()
-})
-.then(function(data){
-    console.log(data.products)
+fetch('https://dummyjson.com/products/category/mens-shoes') 
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data.products)
 
-    let productos = data.products //.products es para entrar al objeto literal donde están los arrays 
-    for (let i=0; i < productos.length; i++){ 
-        product.innerHTML += `<article>
-          <img src = "${productos[i].images}"> 
-          <h2>Titulo: ${productos[i].title}</h2>  
-          <p>Descripción: ${productos[i].description}</p>
-          <h3>Precio: ${productos[i].price}</h3>  
-        </article>` 
-    } 
-}) 
+        let productos = data.products 
+        for (let i = 0; i < productos.length && i < 10; i++) { 
+            product.innerHTML += `<article>
+          <img src= "${productos[i].thumbnail}" class="producto">
+        <h2>Titulo: ${productos[i].title}</h2>
+        <p>Descripción: ${productos[i].description}</p>
+        <h3>Precio: ${productos[i].price}</h3> 
+        <a href="./product.html" class="boton">ver detalle</a>   
+        </article>`
+        }
+    })
 
-.catch(function(e){
-    console.log("el error es:" +e);
-});
+    .catch(function (e) {
+        console.log("el error es:" + e);
+    });
 
 
-let product2 = document.querySelector(".productos-seccion2") 
+let product2 = document.querySelector(".productos-seccion2")
 
-fetch('https://dummyjson.com/products') 
-.then(function(response){
-    return response.json()
-})
-.then(function(data){
-    console.log(data.products)
+fetch('https://dummyjson.com/products/category/sports-accessories')   
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data.products)
 
-    let productos = data.products //.products es para entrar al objeto literal donde están los arrays 
-    for (let i=0; i < productos.length; i++){ 
-        product2.innerHTML += `<article>
-          <img src = "${productos[i].images}">  
-          <h2>Titulo: ${productos[i].title}</h2>  
-          <p>Descripción: ${productos[i].description}</p>
-          <h3>Precio: ${productos[i].price}</h3>  
-        </article>` 
-    } 
-}) 
-          //falta el botón//
+        let productos = data.products  
+        for (let i = 0; i < productos.length && i < 10; i++) { 
+            product2.innerHTML += `
+        <article class="art1.1"> 
+        <img src= "${productos[i].thumbnail}" class="producto"> 
+        <h2>Titulo: ${productos[i].title}</h2>
+        <p>Descripción: ${productos[i].description}</p>
+        <h3>Precio: ${productos[i].price}</h3> 
+        <a href="./product.html" class="boton">ver detalle</a> 
+        </article>
+        `
+        }
+    })
 
-.catch(function(e){
-    console.log("el error es:" +e);
-});
+    .catch(function (e) {
+        console.log("el error es:" + e);
+    });
+
