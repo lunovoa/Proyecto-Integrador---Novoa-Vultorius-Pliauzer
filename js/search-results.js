@@ -14,34 +14,14 @@ buscador.addEventListener("submit", function(event){
     }
 
    let url = new URLSearchParams(location.search)
-   let busquedaUsuario = localStorage.getItem("category")
-   let resultado = document.querySelector("section-search")
+   let busquedaUsuario = url.get("category") 
+   let endpoint = "https://dummyjson.com/products/search?q=" + busquedaUsuario;
+
+   let resultado = document.querySelector(".section-search");
+ 
+   resultado.innerHTML = `<h2>Resultados de busqueda para: ${busquedaUsuario}</h2>`;  
+
    
-   fetch('https://dummyjson.com/products/search?q=phone')
-   .then (function(response){
-    return response.json()
-   })
-   .then(function(data){
-    let resultadoBusqueda = data.products
-
-    for(let i = 0; i < resultadoBusqueda.length; i++){
-        resultado.innerHTML += `
-        <section>
-            <img src= "${productos[i].thumbnail}" class="producto">
-            <h2>Titulo: ${productos[i].title}</h2>
-            <p>Descripción: ${productos[i].description}</p>
-            <h3>Precio: ${productos[i].price}</h3> 
-            <a href="./product.html" class="boton">ver detalle</a> 
-        </section>
-        `
-    }
-   })
-
-   .catch(function(error){
-    console.log(error)
-})
-
-})
 
 
 let categorias = document.querySelector(".barra");
@@ -65,29 +45,4 @@ fetch('https://dummyjson.com/products/category-list')
 .catch(function(e){
     console.log("el error es:" +e);
 });
-
-
-
-
-let buscar = document.querySelector(".formulario-busqueda");  
-
-form.addEventListener("submit", function(event) {
-    console.log("dentro del eventListener");
-    event.preventDefault();
-
-    if(buscar.value.lenght < 2){
-        alert("Debe completar la busqueda con mínimo 3 caracteres");  
-
-    } else{
-        this.submit()
-    }
-}) 
-
-buscar.addEventListener("blur", function(){ 
-    console.log("en blur");
-    if(buscar.value == ""){ 
-        alert("Debe buscar algo")
-    }
-})
-
 
