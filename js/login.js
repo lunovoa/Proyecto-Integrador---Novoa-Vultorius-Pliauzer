@@ -13,3 +13,24 @@ buscador.addEventListener("submit", function(event){
         busqueda.innerHTML = "Tiene que tener al menos 3 caracteres"
     }
 })
+
+
+let formLogin = document.querySelector(".formulario-login");
+let campoEmail = document.querySelector(".campo-email");
+let campoPass = document.querySelector(".campo-pass");
+let errorLogin = document.querySelector(".error-login");
+
+formLogin.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (campoEmail.value == "") {
+        errorLogin.innerText = "El campo email es obligatorio";
+    } else if (campoPass.value == "") {
+        errorLogin.innerText = "El campo contraseña es obligatorio";
+    } else if (campoPass.value.length < 6) {
+        errorLogin.innerText = "La contraseña debe tener al menos 6 caracteres";
+    } else {
+        localStorage.setItem("email", campoEmail.value);
+        this.submit();
+    }
+});

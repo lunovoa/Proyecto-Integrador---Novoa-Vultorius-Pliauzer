@@ -38,13 +38,15 @@
 
                 <div class="mail-login">
                     <label for="email">Mail:</label>
-                    <input type="email" name="email" value="" required>  
+                    <input type="email" name="email" value="" class="campo-email">  
                 </div>
 
                 <div class="password-login">
                     <label for="password">Contraseña:</label>
-                    <input type="password" name="pass" value="" required> 
+                    <input type="password" name="pass" value="" class="campo-pass"> 
                 </div>
+
+                <p class="error-login"></p>
 
                 <div class="caja-button">
                   <button type="submit" class="ingresar-button">Ingresar</button>
@@ -62,5 +64,8 @@
         <p class="nombres">Novoa · Vultorius · Pliauzer</p>
     </footer>
 
+    <script src="./js/login.js"></script>
+    <script src="./js/saludo.js"></script>
+    <script src="./js/logout.js"></script>
 </body>
 </html>
