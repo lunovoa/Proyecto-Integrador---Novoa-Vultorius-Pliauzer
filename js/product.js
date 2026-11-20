@@ -27,48 +27,66 @@ fetch('https://dummyjson.com/products/category-list')
 
     let resultado = data 
     for (let i = 0; i < resultado.length; i++) { 
-        categorias.innerHTML += `<li>
-        <a href = "./product.html">${resultado[i]}</a>
-        </li>`  
+        categorias.innerHTML += `
+        <li class="categoria">
+        <a href="./category.html?category=${resultado[i]}">${resultado[i]}</a>
+        </li>  
+        `  
     }  
 })
 
 .catch(function(e){
     console.log("el error es:" +e);
-});
+}); 
 
 
 
-let product = document.querySelector(".article-product")
+let product = document.querySelector(".article-product"); 
 
-fetch('https://dummyjson.com/products/1')  
-.then(function(response){
-    return response.json()
-})
-.then(function(data){
-    console.log(data)
+let queryString = location.search;
+let parametros = new URLSearchParams(queryString);
+let id = parametros.get("id");
 
-    let producto = data 
-    { 
-        product.innerHTML += `<article>
+if (id) {
+    fetch("https://dummyjson.com/products/" + id)
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("No se encontró el producto");
+            }
 
-        <a href="./product.html"><img src="${producto.thumbnail}" alt="musculosa de runik" class="producto"></a>
-            <h2>Producto: ${producto.title}</h2>
-            <h3>Marca: ${producto.brand}</h3> 
-            <p>Descripcion: ${producto.description}</p> 
-            <h3>Precio: ${producto.price}</h3>  
-            <a href="./category.html"><h3>${producto.category}</h3></a>
-            <h3>Stock: ${producto.stock}</h3>
-            <a href="./product.html" class="boton">ver detalle</a> 
-            <h4>${producto.tags}</h4>   
-        </article>`  
-    } 
-  
-}) 
+            return response.json();
+        })
+        .then(function(data) {
+            let producto = data;
 
-.catch(function(e){
-    console.log("el error es:" +e);
-});
+            product.innerHTML = `
+                <article>
+                    <img
+                        src="${producto.thumbnail}"
+                        alt="${producto.title}"
+                        class="producto">
+
+                    <h2>Producto: ${producto.title}</h2>
+                    <h3>Marca: ${producto.brand || "Sin marca informada"}</h3>
+                    <p>Descripción: ${producto.description}</p>
+                    <h3>Precio: USD ${producto.price}</h3>
+
+                    <a href="./category.html?category=${producto.category}">
+                        <h3>${producto.category}</h3>
+                    </a>
+
+                    <h3>Stock: ${producto.stock}</h3>
+                    <h4>${producto.tags.join(", ")}</h4>
+                </article>
+            `;
+        })
+        .catch(function(error) {
+            console.log("El error es:", error);
+            product.innerHTML = "<p>No se pudo cargar el producto.</p>";
+        });
+} else {
+    product.innerHTML = "<p>Seleccioná un producto desde el inicio o una categoría.</p>";
+}
 
 
 let resena = document.querySelector(".reviews"); 

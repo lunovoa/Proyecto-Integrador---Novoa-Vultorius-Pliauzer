@@ -30,7 +30,7 @@ fetch('https://dummyjson.com/products/category-list')
     let resultado = data 
     for (let i = 0; i < resultado.length; i++) { 
         categorias.innerHTML += `<li>
-        <a href = "./product.html">${resultado[i]}</a>
+        <a href="./category.html?category=${resultado[i]}">${resultado[i]}</a> 
         </li>`  
     }  
 })
@@ -57,7 +57,7 @@ fetch('https://dummyjson.com/products/category/mens-shoes')
         <h2>Titulo: ${productos[i].title}</h2>
         <p>Descripción: ${productos[i].description}</p>
         <h3>Precio: ${productos[i].price}</h3> 
-        <a href="./product.html" class="boton">ver detalle</a>   
+        <a href="./product.html?id=${productos[i].id}" class="boton">ver detalle</a> 
         </article>`
         }
     })
@@ -84,11 +84,11 @@ fetch('https://dummyjson.com/products/category/sports-accessories')
         <h2>Titulo: ${productos[i].title}</h2>
         <p>Descripción: ${productos[i].description}</p>
         <h3>Precio: ${productos[i].price}</h3> 
-        <a href="./product.html" class="boton">ver detalle</a> 
+        <a href="./product.html?id=${productos[i].id}" class="boton">ver detalle</a>  
         </article>
         `
         }
-    })
+    })  
 
     .catch(function (e) {
         console.log("el error es:" + e);
