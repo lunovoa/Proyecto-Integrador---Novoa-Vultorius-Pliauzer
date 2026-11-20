@@ -1,16 +1,19 @@
-let buscadorSaludo = document.querySelector(".buscador")
-let inputSaludo = document.querySelector(".input")
-let respuestaSaludo = document.querySelector(".error");
+let buscador = document.querySelector(".buscador")
+let input = document.querySelector(".input")
+let respuesta = document.querySelector(".error");
 
 buscadorSaludo.addEventListener("submit", function(event){
     event.preventDefault()
     let busqueda = inputSaludo.value
 
     if (busqueda == ""){
-        busqueda.innerHTML = "Completar la busqueda"
+        busqueda.innerText = "Completar la busqueda"
 
     } else if (busqueda.length < 3){
-        busqueda.innerHTML = "Tiene que tener al menos 3 caracteres"
+        busqueda.innerText = "Tiene que tener al menos 3 caracteres"
+    }
+    else {
+        this.submit()
     }
 })
 
