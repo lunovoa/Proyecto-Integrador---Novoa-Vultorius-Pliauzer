@@ -48,7 +48,7 @@ let parametros = new URLSearchParams(queryString);
 let categoria = parametros.get("category");
 
 if (categoria) {
-    fetch("https://dummyjson.com/products/category/" + categoria + "?limit=0")  
+    fetch("https://dummyjson.com/products/category/" + categoria)    
         .then(function(response) {
             return response.json();
         })
@@ -93,8 +93,3 @@ if (categoria) {
 } else {
     productos.innerHTML = "<p>Seleccioná una categoría desde el menú.</p>";
 }
-
-console.log("Categoría:", categoria);
-
-console.log("Se cargó el JS de category");  
-

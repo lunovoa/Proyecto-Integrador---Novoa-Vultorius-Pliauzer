@@ -32,7 +32,7 @@ fetch('https://dummyjson.com/products/category-list')
     for (let i = 0; i < resultado.length; i++) { 
         categorias.innerHTML += `
         <li class="categoria">
-        <a href="./category.html?category=${resultado[i]}">${resultado[i]}</a>
+        <a href="./category.html?category=${resultado[i]}">${resultado[i]}</a> 
         </li>  
         `  
     }  
@@ -53,11 +53,7 @@ let id = parametros.get("id");
 if (id) {
     fetch("https://dummyjson.com/products/" + id)
         .then(function(response) {
-            if (!response.ok) {
-                throw new Error("No se encontró el producto");
-            }
-
-            return response.json();
+            return response.json(); 
         })
         .then(function(data) {
             let producto = data;
@@ -79,8 +75,7 @@ if (id) {
                     </a>
 
                     <h3>Stock: ${producto.stock}</h3>
-                    <h4>${producto.tags.join(", ")}</h4>
-                </article>
+                </article>  
             `;
         })
         .catch(function(error) {

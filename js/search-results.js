@@ -40,7 +40,7 @@ fetch('https://dummyjson.com/products/category-list')
         <a href="./category.html?category=${resultado[i]}">${resultado[i]}</a>
         </li>
         `
-    }
+    } 
 })
 
 .catch(function(e){

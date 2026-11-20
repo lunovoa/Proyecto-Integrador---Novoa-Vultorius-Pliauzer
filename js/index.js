@@ -34,8 +34,8 @@ fetch('https://dummyjson.com/products/category-list')
     let resultado = data 
     for (let i = 0; i < resultado.length; i++) { 
         categorias.innerHTML += `<li>
-        <a href="./category.html?category=${resultado[i]}">${resultado[i]}</a> 
-        </li>`  
+        <a href="./category.html?category=${resultado[i]}">${resultado[i]}</a>  
+        </li>`   
     }  
 })
 
