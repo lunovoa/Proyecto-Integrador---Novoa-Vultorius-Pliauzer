@@ -47,6 +47,8 @@ fetch('https://dummyjson.com/products/category-list')
     console.log("el error es:" +e);
 });
 
+
+
 let url = new URLSearchParams(location.search)
 let busquedaUsuario = url.get("category")
 let endpoint = "https://dummyjson.com/products/search?q=" + busquedaUsuario;
@@ -64,6 +66,11 @@ fetch(endpoint)
     console.log(data.products)
 
     let productos = data.products
+
+    if (productos.length == 0){
+        alert("No hay resultados para el termino: " + busquedaUsuario)
+        resultado.innerText = `No se encontraron productos con esa descripción`
+    } else {
     for (let i = 0; i < productos.length && i < 10; i++) {
         resultado.innerHTML += `
             <article>
@@ -73,8 +80,8 @@ fetch(endpoint)
             <h3>Precio: ${productos[i].price}</h3>
             <a href="./product.html" class="boton">ver detalle</a>
             </article>`
+        }
     }
-
 
 })
 

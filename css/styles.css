@@ -90,6 +90,11 @@ h2{
    color: aliceblue;
 }
 
+.h2-search{
+   display: flex;
+   justify-content: center;
+}
+
 p{
    color: aliceblue;
 }
@@ -290,7 +295,7 @@ footer{
    margin-top: 40px;
    text-align: center;
    color: white;
-<<<<<<< Updated upstream
+
 }
 
 .main-category{
@@ -315,8 +320,10 @@ footer{
 }
 
 .article-product{
-   width: 60%;
+   width: 50%;
+   height: 620px;
 }
+
 
 .h2-category{
    margin-bottom: 20px;
@@ -341,6 +348,7 @@ footer{
    flex-wrap: wrap;
    justify-content: space-between;
    width: 79%;
+   color: aliceblue;
 }
 
 .div-search{
@@ -401,7 +409,7 @@ footer{
     }
 
     section{
-      width: 100%;
+      width: 80%;
     }
 
     .buscador{
@@ -437,9 +445,3 @@ footer{
     }
 }
 
-   
-
-
-=======
-}       
->>>>>>> Stashed changes
