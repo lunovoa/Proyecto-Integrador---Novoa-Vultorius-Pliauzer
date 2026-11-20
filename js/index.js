@@ -4,17 +4,21 @@ let respuesta = document.querySelector(".error");
 
 
 buscador.addEventListener("submit", function(event){
+    console.log('hola');
+    
     event.preventDefault();
     let busqueda = input.value
 
     if (busqueda == ""){
-        respuesta.innerHTML = "Completar la busqueda";
+        respuesta.innerText = "Completar la busqueda";
 
     } else if (busqueda.length < 3){
-        respuesta.innerHTML = "Tiene que tener al menos 3 caracteres";
-    };
-    location.href = "resultados.html?category=" + busqueda
+        respuesta.innerText = "Tiene que tener al menos 3 caracteres";
+    } else {
+        this.submit()
+    }
 })
+
 
 
 let categorias = document.querySelector(".barra");

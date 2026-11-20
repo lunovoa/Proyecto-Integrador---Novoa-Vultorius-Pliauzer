@@ -120,10 +120,14 @@ section{
 
 
 article{
-   max-width: 18%; 
+   max-width: 30%; 
    margin: 13px;
+   
 }
 
+.error{
+    color: red;
+}
 .boton{
    background-color: rgb(170, 10, 10);
    color: aliceblue;
@@ -333,7 +337,7 @@ footer{
 
 .section-search{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    flex-wrap: wrap;
    justify-content: space-between;
    width: 79%;

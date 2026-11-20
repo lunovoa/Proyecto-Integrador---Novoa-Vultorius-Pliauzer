@@ -7,11 +7,12 @@ buscador.addEventListener("submit", function(event){
     let busqueda = input.value
 
     if (busqueda == ""){
-        busqueda.innerHTML = "Completar la busqueda"
+        respuesta.innerText = "Completar la busqueda"
 
     } else if (busqueda.length < 3){
-        busqueda.innerHTML = "Tiene que tener al menos 3 caracteres"
+        respuesta.innerText = "Tiene que tener al menos 3 caracteres"
     }
+    this.submit()
 })
 
 
